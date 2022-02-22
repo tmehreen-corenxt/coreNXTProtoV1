@@ -1,0 +1,12 @@
+C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Models\bin\Debug\net6.0\coreNXTProtoV1.Models.deps.json
+C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Models\bin\Debug\net6.0\coreNXTProtoV1.Models.dll
+C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Models\bin\Debug\net6.0\coreNXTProtoV1.Models.pdb
+C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Models\obj\Debug\net6.0\coreNXTProtoV1.Models.csproj.AssemblyReference.cache
+C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Models\obj\Debug\net6.0\coreNXTProtoV1.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Models\obj\Debug\net6.0\coreNXTProtoV1.Models.AssemblyInfoInputs.cache
+C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Models\obj\Debug\net6.0\coreNXTProtoV1.Models.AssemblyInfo.cs
+C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Models\obj\Debug\net6.0\coreNXTProtoV1.Models.csproj.CoreCompileInputs.cache
+C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Models\obj\Debug\net6.0\coreNXTProtoV1.Models.dll
+C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Models\obj\Debug\net6.0\refint\coreNXTProtoV1.Models.dll
+C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Models\obj\Debug\net6.0\coreNXTProtoV1.Models.pdb
+C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Models\obj\Debug\net6.0\ref\coreNXTProtoV1.Models.dll

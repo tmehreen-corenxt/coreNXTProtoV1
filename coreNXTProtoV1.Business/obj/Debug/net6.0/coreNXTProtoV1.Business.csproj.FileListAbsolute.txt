@@ -1,0 +1,17 @@
+C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Business\bin\Debug\net6.0\coreNXTProtoV1.Business.deps.json
+C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Business\bin\Debug\net6.0\coreNXTProtoV1.Business.dll
+C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Business\bin\Debug\net6.0\coreNXTProtoV1.Business.pdb
+C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Business\bin\Debug\net6.0\coreNXTProtoV1.DataAccess.dll
+C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Business\bin\Debug\net6.0\coreNXTProtoV1.Models.dll
+C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Business\bin\Debug\net6.0\coreNXTProtoV1.DataAccess.pdb
+C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Business\bin\Debug\net6.0\coreNXTProtoV1.Models.pdb
+C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Business\obj\Debug\net6.0\coreNXTProtoV1.Business.csproj.AssemblyReference.cache
+C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Business\obj\Debug\net6.0\coreNXTProtoV1.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Business\obj\Debug\net6.0\coreNXTProtoV1.Business.AssemblyInfoInputs.cache
+C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Business\obj\Debug\net6.0\coreNXTProtoV1.Business.AssemblyInfo.cs
+C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Business\obj\Debug\net6.0\coreNXTProtoV1.Business.csproj.CoreCompileInputs.cache
+C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Business\obj\Debug\net6.0\coreNXTProtoV1.Business.csproj.CopyComplete
+C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Business\obj\Debug\net6.0\coreNXTProtoV1.Business.dll
+C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Business\obj\Debug\net6.0\refint\coreNXTProtoV1.Business.dll
+C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Business\obj\Debug\net6.0\coreNXTProtoV1.Business.pdb
+C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Business\obj\Debug\net6.0\ref\coreNXTProtoV1.Business.dll

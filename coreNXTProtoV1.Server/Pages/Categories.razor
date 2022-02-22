@@ -1,0 +1,74 @@
+﻿@page "/categories"
+@using Microsoft.AspNetCore.Components.Web
+@using coreNXTProtoV1.Business.Repository.IRepository
+@using coreNXTProtoV1.Models
+@inject ICategoryRepository catrepository    
+@*@inject PersistentComponentState applicationState*@
+
+<h3>Categories</h3>
+
+@if (categoryList ==null)    
+{
+    <p><em>Loading...</em></p>
+}
+
+else{
+    <div class= "row mt-4">
+       <div class="col-12">
+    <table class="table" >
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <ErrorBoundary>
+        <ChildContent>
+
+        <tbody>        
+            @if (categoryList.Any())
+            {
+                @foreach (var category in categoryList)
+                {
+                    <tr>
+                        <td>@category.Id</td>
+                        <td>@category.Name</td>
+                        <td>@category.Description</td>
+                     </tr>
+                }
+            }
+           
+        </tbody>
+    </ChildContent>
+    <ErrorContent>
+          <p>  There was error retrieving data </p>
+    </ErrorContent>
+    </ErrorBoundary>
+        
+    </table>
+
+       </div>
+    </div>
+    }
+    
+
+@code {
+
+
+    //public IEnumerable<TopLevelMenu> TopLevelMenuItems { get; set; } 
+
+    private IEnumerable<CategoryDTO> categoryList { get; set; } = new List<CategoryDTO>();
+    protected override async Task OnInitializedAsync()
+    {
+        categoryList = await catrepository.GetAllCategories();
+
+    }
+    //protected override void OnInitialized()
+    //{
+    //     Delay(15000);
+    //    categoryList =  catrepository.GetAllCategories();
+
+    //}
+}
+
