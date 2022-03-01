@@ -1,11 +1,3 @@
-C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Server\obj\Debug\net6.0\coreNXTProtoV1.Server.csproj.AssemblyReference.cache
-C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Server\obj\Debug\net6.0\coreNXTProtoV1.Server.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Server\obj\Debug\net6.0\coreNXTProtoV1.Server.AssemblyInfoInputs.cache
-C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Server\obj\Debug\net6.0\coreNXTProtoV1.Server.AssemblyInfo.cs
-C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Server\obj\Debug\net6.0\coreNXTProtoV1.Server.csproj.CoreCompileInputs.cache
-C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Server\obj\Debug\net6.0\coreNXTProtoV1.Server.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Server\obj\Debug\net6.0\coreNXTProtoV1.Server.RazorAssemblyInfo.cache
-C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Server\obj\Debug\net6.0\coreNXTProtoV1.Server.RazorAssemblyInfo.cs
 C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Server\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Server\bin\Debug\net6.0\appsettings.json
 C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Server\bin\Debug\net6.0\coreNXTProtoV1.Server.staticwebassets.runtime.json
@@ -56,6 +48,14 @@ C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Ser
 C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Server\bin\Debug\net6.0\coreNXTProtoV1.Business.pdb
 C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Server\bin\Debug\net6.0\coreNXTProtoV1.DataAccess.pdb
 C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Server\bin\Debug\net6.0\coreNXTProtoV1.Models.pdb
+C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Server\obj\Debug\net6.0\coreNXTProtoV1.Server.csproj.AssemblyReference.cache
+C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Server\obj\Debug\net6.0\coreNXTProtoV1.Server.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Server\obj\Debug\net6.0\coreNXTProtoV1.Server.AssemblyInfoInputs.cache
+C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Server\obj\Debug\net6.0\coreNXTProtoV1.Server.AssemblyInfo.cs
+C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Server\obj\Debug\net6.0\coreNXTProtoV1.Server.csproj.CoreCompileInputs.cache
+C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Server\obj\Debug\net6.0\coreNXTProtoV1.Server.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Server\obj\Debug\net6.0\coreNXTProtoV1.Server.RazorAssemblyInfo.cache
+C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Server\obj\Debug\net6.0\coreNXTProtoV1.Server.RazorAssemblyInfo.cs
 C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Server\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Server\obj\Debug\net6.0\staticwebassets.development.json
 C:\Users\Malik sahb .DESKTOP-V2N5VJQ\Downloads\coreNXTProtoV1\coreNXTProtoV1.Server\obj\Debug\net6.0\scopedcss\Shared\MainLayout.razor.rz.scp.css

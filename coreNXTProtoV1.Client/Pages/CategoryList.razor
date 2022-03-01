@@ -1,0 +1,106 @@
+﻿@page "/Home/CategoriesList"
+@*@inject ILocalStorageService localStorage
+*@
+@inject ICategoryService categoryService
+<h3>CategoryList</h3>
+@if (categories ==null)    
+{
+    <p><em>Loading...</em></p>
+}
+
+else{
+    <div class= "row mt-4">
+       <div class="col-12">
+    <table class="table" >
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <ErrorBoundary>
+        <ChildContent>
+
+        <tbody>        
+            @if (categories.Any())
+            {
+                @foreach (var category in categories)
+                {
+                    <tr>
+                        <td>@category.Id</td>
+                        <td>@category.Name</td>
+                        <td>@category.Description</td>
+                     </tr>
+                }
+            }
+           
+        </tbody>
+    </ChildContent>
+    <ErrorContent>
+          <p>  There was error retrieving data </p>
+    </ErrorContent>
+    </ErrorBoundary>
+        
+    </table>
+
+       </div>
+    </div>
+    }
+
+@*<EditForm Model="categoryModel" onsubmit="SaveCategoryInfo" class="bg-light"> 
+
+<div>
+        <div class="form-group">
+            <label> ID</label>
+            <InputText @bind-value="categoryModel.Id" type="text" class="form-control" />
+        </div>
+    </div>
+    <div>
+        <div class="form-group">
+            <label> Name</label>
+            <InputText @bind-value="categoryModel.Name" type="text" class="form-control" />
+        </div>
+    </div>
+    <div>
+        <div class="form-group">
+            <label> Description</label>
+            <InputText @bind-value="categoryModel.Description" type="text" class="form-control" />
+        </div>
+    </div>    
+</EditForm>
+*@
+@code 
+{
+    
+    public IEnumerable<CategoryDTO> categories { get; set; } = new List<CategoryDTO>();
+    
+    protected override async Task OnInitializedAsync()
+    {
+            await Task.Delay(20000);
+            categories= await categoryService.GetAllCategories();
+    }
+    //public CategoryVM categoryModel { get; set; } = new CategoryVM();
+
+      //public List<CategoryDTO> categories { get; set; } = null!;
+  
+    //protected override async Task OnInitializedAsync()
+    //{
+    //            await Task.Delay(5000);
+    //            if (await localStorage.GetItemAsync<CategoryVM>("Categoriesinfo")!=null)
+    //            {
+    //                categoryModel = await localStorage.GetItemAsync<CategoryVM>("Categoriesinfo");
+    //            }
+    //        await LoadCategories();        
+       
+    //}
+    //private async Task LoadCategories()
+    //{
+    //    categories= await categoryService.GetAllCategories();
+    //}
+
+    //private async Task SaveCategoryInfo()
+    //{
+
+    //}
+}

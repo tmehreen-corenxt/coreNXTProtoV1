@@ -1,0 +1,49 @@
+﻿@page "/"
+@*@inject ILocalStorageService localStorage*@
+@inject NavigationManager nav
+<PageTitle>Home</PageTitle>
+
+<h1>This is client side app</h1>
+
+
+@*<btn class="btn-primary  border: 4px double #cccccc;"  @onclick="SaveCategoryList"> See Categories</btn>*@
+@*    <div class= "row mt-4">
+       <div class="col-12">
+    <table Model="categoryModel" class="table" >
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <ErrorBoundary>
+        <ChildContent>
+
+        <tbody>        
+           <tr>
+               <td>@categoryModel.Id</td>
+               <td>@categoryModel.Name</td>
+               <td>@categoryModel.Description</td>
+
+           </tr>
+           
+        </tbody>
+    </ChildContent>
+    <ErrorContent>
+          <p>  There was error retrieving data </p>
+    </ErrorContent>
+    </ErrorBoundary>
+        
+    </table>
+
+       </div>
+    </div>
+*@
+@code{
+    //private async Task SaveCategoryList()
+    //{
+    //    await localStorage.SetItemAsync("Categoriesinfo",categoryModel);
+    //    nav.NavigateTo("/Home/CategoriesList",true);
+    //}
+}
