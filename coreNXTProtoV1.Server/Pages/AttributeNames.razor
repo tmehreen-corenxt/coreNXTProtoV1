@@ -1,0 +1,66 @@
+﻿@page "/attributenames"
+@using Microsoft.AspNetCore.Components.Web
+@using coreNXTProtoV1.Business.Repository.IRepository
+@using coreNXTProtoV1.Models
+@inject IAttributeNamesRepository attrepository    
+
+<h3>Attribute Names</h3>
+
+@if (attributeNamesList ==null)    
+{
+    <p><em>Loading...</em></p>
+}
+
+else{
+    <div class= "row mt-4">
+       <div class="col-12">
+    <table class="table" >
+        <thead>
+            <tr>
+                <th>Attribute Id</th>
+                <th>Name</th>
+                <th>Locale Id</th>
+            </tr>
+        </thead>
+        <ErrorBoundary>
+        <ChildContent>
+
+        <tbody>        
+            @if (attributeNamesList.Any())
+            {
+                @foreach (var attributes in attributeNamesList)
+                {
+                    <tr>
+                        <td>@attributes.AttributeId </td>
+                        <td>@attributes.Name</td>
+                        <td>@attributes.LocaleId</td>
+                     </tr>
+                }
+            }
+           
+        </tbody>
+    </ChildContent>
+    <ErrorContent>
+          <p>  There was error retrieving data </p>
+    </ErrorContent>
+    </ErrorBoundary>
+        
+    </table>
+
+       </div>
+    </div>
+    }
+    
+
+@code {
+
+
+
+    private IEnumerable<AttributeNamesDTO> attributeNamesList { get; set; } = new List<AttributeNamesDTO>();
+    protected override async Task OnInitializedAsync()
+    {
+        attributeNamesList = await attrepository.GetAllAttributeNames();
+
+    }
+}
+

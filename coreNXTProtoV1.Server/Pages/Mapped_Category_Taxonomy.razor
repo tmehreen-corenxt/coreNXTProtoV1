@@ -1,0 +1,61 @@
+﻿@page "/mapped_category_taxonomy"
+@using Microsoft.AspNetCore.Components.Web
+@using coreNXTProtoV1.Business.Repository.IRepository
+@using coreNXTProtoV1.Models
+@inject IMapped_Category_TaxonomyRepository mctrepository    
+
+<h3>Categories</h3>
+
+@if (mctList ==null)    
+{
+    <p><em>Loading...</em></p>
+}
+
+else{
+    <div class= "row mt-4">
+       <div class="col-12">
+    <table class="table" >
+        <thead>
+            <tr>
+                <th>Category Id</th>
+                <th>Parent Category Id</th>
+            </tr>
+        </thead>
+        <ErrorBoundary>
+        <ChildContent>
+
+        <tbody>        
+            @if (mctList.Any())
+            {
+                @foreach (var mct in mctList)
+                {
+                    <tr>
+                        <td>@mct.CategoryId</td>
+                        <td>@mct.ParentCategoryId</td>
+                     </tr>
+                }
+            }
+           
+        </tbody>
+    </ChildContent>
+    <ErrorContent>
+          <p>  There was error retrieving data </p>
+    </ErrorContent>
+    </ErrorBoundary>
+        
+    </table>
+
+       </div>
+    </div>
+    }
+    
+
+@code {
+    private IEnumerable<Mapped_Category_TaxonomyDTO> mctList { get; set; } = new List<Mapped_Category_TaxonomyDTO>();
+    protected override async Task OnInitializedAsync()
+    {
+        mctList = await mctrepository.GetAllMapped_Category_Taxonomies();
+
+    }
+}
+

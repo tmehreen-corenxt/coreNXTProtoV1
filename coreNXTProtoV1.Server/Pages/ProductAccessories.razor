@@ -1,0 +1,74 @@
+﻿@page "/productaccessories"
+@using Microsoft.AspNetCore.Components.Web
+@using coreNXTProtoV1.Business.Repository.IRepository
+@using coreNXTProtoV1.Models
+@inject IProductAccessoriesRepository paccesoriesrepository    
+
+<h3>Product Accessories</h3>
+
+@if (productAccessoriesList ==null)    
+{
+    <p><em>Loading...</em></p>
+}
+
+else{
+    <div class= "row mt-4">
+       <div class="col-12">
+    <table class="table" >
+        <thead>
+            <tr>
+                <th>Product Id</th>
+                <th>Accessory Product Id</th>
+                <th>Accessory Product</th>
+                <th>Note</th>
+                <th>Recommendation_Weight</th>
+                <th>Is Active</th>
+                <th>Is Option</th>
+                <th>Is Preferred</th>
+
+            </tr>
+        </thead>
+        <ErrorBoundary>
+        <ChildContent>
+
+        <tbody>        
+            @if (productAccessoriesList.Any())
+            {
+                @foreach (var productAccessory in productAccessoriesList)
+                {
+                    <tr>
+                        <td>@productAccessory.ProductId</td>
+                        <td>@productAccessory.AccessoryProductId</td>
+                        <td>@productAccessory.AccessoryProduct</td>
+                        <td>@productAccessory.Note</td>
+                        <td>@productAccessory.Recommendation_Weight</td>
+                        <td>@productAccessory.IsActive</td>
+                        <td>@productAccessory.IsOption</td>
+                        <td>@productAccessory.IsPreferred</td>       
+                     </tr>
+                }
+            }
+           
+        </tbody>
+    </ChildContent>
+    <ErrorContent>
+          <p>  There was error retrieving data </p>
+    </ErrorContent>
+    </ErrorBoundary>
+        
+    </table>
+
+       </div>
+    </div>
+    }
+    
+
+@code {
+    private IEnumerable<ProductAccessoriesDTO> productAccessoriesList { get; set; } = new List<ProductAccessoriesDTO>();
+    protected override async Task OnInitializedAsync()
+    {
+      productAccessoriesList   = await paccesoriesrepository.GetAllProductAccessories();
+
+    }
+}
+

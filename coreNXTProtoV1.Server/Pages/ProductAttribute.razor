@@ -1,0 +1,83 @@
+﻿@page "/productattribute"
+@using Microsoft.AspNetCore.Components.Web
+@using coreNXTProtoV1.Business.Repository.IRepository
+@using coreNXTProtoV1.Models
+@inject IProductAttributeRepository prodattrepository    
+
+<h3>Product Attributes</h3>
+
+@if (productAttributesList ==null)    
+{
+    <p><em>Loading...</em></p>
+}
+
+else{
+    <div class= "row mt-4">
+       <div class="col-12">
+    <table class="table" >
+        <thead>
+            <tr>
+                <th>AttributeId</th>
+                <th>CategoryId</th>
+                <th>AbsoluteValue</th>
+                <th>DisplayValue</th>
+                <th>LocaleId</th>
+                <th>ProductId</th>
+                <th>UnitId</th>
+                <th>IsAbsolute</th>
+                <th>IsActive</th>
+            
+
+            </tr>
+        </thead>
+        <ErrorBoundary>
+        <ChildContent>
+
+        <tbody>        
+            @if (productAttributesList.Any())
+            {
+                @foreach (var productAttribute in productAttributesList)
+                {
+                    <tr>
+                        <td>@productAttribute.AttributeId</td>
+                        <td>@productAttribute.CategoryId</td>
+                        <td>@productAttribute.AbsoluteValue</td>
+                        <td>@productAttribute.DisplayValue</td>
+                        <td>@productAttribute.LocaleId</td>
+                        <td>@productAttribute.ProductId</td>
+                        <td>@productAttribute.UnitId</td>
+                        <td>@productAttribute.IsAbsolute</td>
+                        <td>@productAttribute.IsActive</td>
+                    
+
+                     </tr>
+                }
+            }
+           
+        </tbody>
+    </ChildContent>
+    <ErrorContent>
+          <p>  There was error retrieving data </p>
+    </ErrorContent>
+    </ErrorBoundary>
+        
+    </table>
+
+       </div>
+    </div>
+    }
+    
+
+@code {
+
+
+    //public IEnumerable<TopLevelMenu> TopLevelMenuItems { get; set; } 
+
+    private IEnumerable<ProductAttributeDTO> productAttributesList { get; set; } = new List<ProductAttributeDTO>();
+    protected override async Task OnInitializedAsync()
+    {
+        productAttributesList = await prodattrepository.GetAllProductAttributes();
+
+    }
+}
+

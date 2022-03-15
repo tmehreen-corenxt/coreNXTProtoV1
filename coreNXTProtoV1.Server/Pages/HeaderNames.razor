@@ -1,0 +1,65 @@
+﻿@page "/headernames"
+@using Microsoft.AspNetCore.Components.Web
+@using coreNXTProtoV1.Business.Repository.IRepository
+@using coreNXTProtoV1.Models
+@inject IHeaderNamesRepository headerrepository    
+
+<h3>Header Names</h3>
+
+@if (headersList ==null)    
+{
+    <p><em>Loading...</em></p>
+}
+
+else{
+    <div class= "row mt-4">
+       <div class="col-12">
+    <table class="table" >
+        <thead>
+            <tr>
+                <th>Header Id</th>
+                <th>Locale Id</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <ErrorBoundary>
+        <ChildContent>
+
+        <tbody>        
+            @if (headersList.Any())
+            {
+                @foreach (var header in headersList)
+                {
+                    <tr>
+                        <td>@header.HeaderId</td>
+                        <td>@header.LocaleId</td>
+                        <td>@header.Name</td>
+                     </tr>
+                }
+            }
+           
+        </tbody>
+    </ChildContent>
+    <ErrorContent>
+          <p>  There was error retrieving data </p>
+    </ErrorContent>
+    </ErrorBoundary>
+        
+    </table>
+
+       </div>
+    </div>
+    }
+    
+
+@code {
+
+
+    private IEnumerable<HeaderNamesDTO> headersList { get; set; } = new List<HeaderNamesDTO>();
+    protected override async Task OnInitializedAsync()
+    {
+        headersList = await headerrepository.GetAllHeaderNames();
+
+    }
+}
+

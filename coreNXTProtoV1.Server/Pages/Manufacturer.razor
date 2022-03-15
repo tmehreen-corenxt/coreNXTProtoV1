@@ -1,0 +1,84 @@
+﻿@page "/manufacturer"
+@using Microsoft.AspNetCore.Components.Web
+@using coreNXTProtoV1.Business.Repository.IRepository
+@using coreNXTProtoV1.Models
+@inject IManufacturerRepository manrepository    
+
+<h3>Manufacturers</h3>
+
+@if (manufacturersList ==null)    
+{
+    <p><em>Loading...</em></p>
+}
+
+else{
+    <div class= "row mt-4">
+       <div class="col-12">
+    <table class="table" >
+        <thead>
+            <tr>
+                <th>Manufacturer Id</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Fax</th>
+                <th>Address 1</th>
+                <th>Address 2</th>
+                <th>City</th>
+                <th>Country</th>
+                <th>State</th>
+                <th>Zip</th>
+                <th>Url</th>
+                <th>Last Updated</th>
+       
+            </tr>
+        </thead>
+        <ErrorBoundary>
+        <ChildContent>
+
+        <tbody>        
+            @if (manufacturersList.Any())
+            {
+                @foreach (var manufacturer in manufacturersList)
+                {
+                    <tr>
+                        <td>@manufacturer.ManufacturerId</td>
+                        <td>@manufacturer.Name</td>
+                        <td>@manufacturer.Phone</td>
+                        <td>@manufacturer.Fax</td>
+                        <td>@manufacturer.Address1</td>
+                        <td>@manufacturer.Address2</td>
+                        <td>@manufacturer.City</td>
+                        <td>@manufacturer.Country</td>
+                        <td>@manufacturer.State</td>
+                        <td>@manufacturer.Zip</td>
+                        <td>@manufacturer.Url</td>
+                        <td>@manufacturer.LastUpdated</td>
+      
+                     </tr>
+                }
+            }
+           
+        </tbody>
+    </ChildContent>
+    <ErrorContent>
+          <p>  There was error retrieving data </p>
+    </ErrorContent>
+    </ErrorBoundary>
+        
+    </table>
+
+       </div>
+    </div>
+    }
+    
+
+@code {
+
+    private IEnumerable<ManufacturerDTO> manufacturersList { get; set; } = new List<ManufacturerDTO>();
+    protected override async Task OnInitializedAsync()
+    {
+        manufacturersList = await manrepository.GetAllManufacturers();
+
+    }
+}
+

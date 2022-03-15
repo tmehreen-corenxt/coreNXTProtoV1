@@ -1,0 +1,76 @@
+﻿@page "/categoryheader"
+@using Microsoft.AspNetCore.Components.Web
+@using coreNXTProtoV1.Business.Repository.IRepository
+@using coreNXTProtoV1.Models
+@inject ICategoryHeaderRepository catheaderrepository    
+
+<h3>Category Headers</h3>
+
+@if (categoryHeadersList ==null)    
+{
+    <p><em>Loading...</em></p>
+}
+
+else{
+    <div class= "row mt-4">
+       <div class="col-12">
+    <table class="table" >
+        <thead>
+            <tr>
+                <th>Category Id</th>
+                <th>Default Display Order</th>
+                <th>Display Order</th>
+                <th>Header Id</th>
+                <th>Is Active</th>
+                <th>Template Type</th>
+                <th>Last Updated</th>
+
+            </tr>
+        </thead>
+        <ErrorBoundary>
+        <ChildContent>
+
+        <tbody>        
+            @if (categoryHeadersList.Any())
+            {
+                @foreach (var categoryheader in categoryHeadersList)
+                {
+                    <tr>
+                        <td>@categoryheader.CategoryId</td>
+                        <td>@categoryheader.DefaultDisplayOrder</td>
+                        <td>@categoryheader.DisplayOrder</td>
+                        <td>@categoryheader.HeaderId</td>
+                        <td>@categoryheader.IsActive</td>
+                        <td>@categoryheader.TemplateType</td>
+                        <td>@categoryheader.LastUpdated</td>
+
+                     </tr>
+                }
+            }
+           
+        </tbody>
+    </ChildContent>
+    <ErrorContent>
+          <p>  There was error retrieving data </p>
+    </ErrorContent>
+    </ErrorBoundary>
+        
+    </table>
+
+       </div>
+    </div>
+    }
+    
+
+@code {
+
+
+
+    private IEnumerable<CategoryHeaderDTO> categoryHeadersList { get; set; } = new List<CategoryHeaderDTO>();
+    protected override async Task OnInitializedAsync()
+    {
+        categoryHeadersList = await catheaderrepository.GetAllCategoryHeaders();
+
+    }
+}
+

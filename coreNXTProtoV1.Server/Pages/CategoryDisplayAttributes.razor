@@ -1,0 +1,78 @@
+﻿@page "/categorydisplayattributes"
+@using Microsoft.AspNetCore.Components.Web
+@using coreNXTProtoV1.Business.Repository.IRepository
+@using coreNXTProtoV1.Models
+@inject ICategoryDisplayAttributesRepository catdisplayrepository    
+
+<h3>Category Display Attributes</h3>
+
+@if (categoryDAList ==null)    
+{
+    <p><em>Loading...</em></p>
+}
+
+else{
+    <div class= "row mt-4">
+       <div class="col-12">
+    <table class="table" >
+        <thead>
+            <tr>
+                <th>Attribute Id</th>
+                <th>Category Id</th>
+                <th>Default Display Order</th>
+                <th>Display Order</th>
+                <th>Header Id</th>
+                <th>Is Active</th>
+                <th>Template Type</th>
+                <th>Last Updated</th>
+
+            </tr>
+        </thead>
+        <ErrorBoundary>
+        <ChildContent>
+
+        <tbody>        
+            @if (categoryDAList.Any())
+            {
+                @foreach (var categoryDA in categoryDAList)
+                {
+                    <tr>
+                        <td>@categoryDA.AttributeId</td>
+                        <td>@categoryDA.CategoryId</td>
+                        <td>@categoryDA.DefaultDisplayOrder</td>
+                        <td>@categoryDA.DisplayOrder</td>
+                        <td>@categoryDA.HeaderId</td>
+                        <td>@categoryDA.IsActive</td>
+                        <td>@categoryDA.TemplateType</td>
+                        <td>@categoryDA.LastUpdated</td>  
+                    </tr>
+                }
+            }
+           
+        </tbody>
+    </ChildContent>
+    <ErrorContent>
+          <p>  There was error retrieving data </p>
+    </ErrorContent>
+    </ErrorBoundary>
+        
+    </table>
+
+       </div>
+    </div>
+    }
+    
+
+@code {
+
+
+    //public IEnumerable<TopLevelMenu> TopLevelMenuItems { get; set; } 
+
+    private IEnumerable<CategoryDisplayAttributesDTO> categoryDAList { get; set; } = new List<CategoryDisplayAttributesDTO>();
+    protected override async Task OnInitializedAsync()
+    {
+        categoryDAList = await catdisplayrepository.GetAllCategoryDisplayAttributes();
+
+    }
+}
+

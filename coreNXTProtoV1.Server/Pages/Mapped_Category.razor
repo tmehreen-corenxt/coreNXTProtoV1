@@ -1,0 +1,62 @@
+﻿@page "/mapped_category"
+@using Microsoft.AspNetCore.Components.Web
+@using coreNXTProtoV1.Business.Repository.IRepository
+@using coreNXTProtoV1.Models
+@inject IMapped_CategoryRepository mappedcatrepository    
+
+<h3>Mapped Categories</h3>
+
+@if (mapped_categoryList ==null)    
+{
+    <p><em>Loading...</em></p>
+}
+
+else{
+    <div class= "row mt-4">
+       <div class="col-12">
+    <table class="table" >
+        <thead>
+            <tr>
+                <th>Category Id</th>
+                <th>Product Id</th>
+            </tr>
+        </thead>
+        <ErrorBoundary>
+        <ChildContent>
+
+        <tbody>        
+            @if (mapped_categoryList.Any())
+            {
+                @foreach (var mapped_category in mapped_categoryList)
+                {
+                    <tr>
+                        <td>@mapped_category.CategoryId</td>
+                        <td>@mapped_category.ProductId</td>
+                     </tr>
+                }
+            }
+           
+        </tbody>
+    </ChildContent>
+    <ErrorContent>
+          <p>  There was error retrieving data </p>
+    </ErrorContent>
+    </ErrorBoundary>
+        
+    </table>
+
+       </div>
+    </div>
+    }
+    
+
+@code {
+
+    private IEnumerable<Mapped_CategoryDTO> mapped_categoryList { get; set; } = new List<Mapped_CategoryDTO>();
+    protected override async Task OnInitializedAsync()
+    {
+        mapped_categoryList = await mappedcatrepository.GetAllMapped_Categories();
+
+    }
+}
+

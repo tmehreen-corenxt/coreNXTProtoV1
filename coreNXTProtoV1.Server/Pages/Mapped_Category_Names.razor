@@ -1,0 +1,64 @@
+﻿@page "/mapped_category_names"
+@using Microsoft.AspNetCore.Components.Web
+@using coreNXTProtoV1.Business.Repository.IRepository
+@using coreNXTProtoV1.Models
+@inject IMapped_Category_NamesRepository mcnrepository    
+
+<h3>Mapped Category Names</h3>
+
+@if (mcnList ==null)    
+{
+    <p><em>Loading...</em></p>
+}
+
+else{
+    <div class= "row mt-4">
+       <div class="col-12">
+    <table class="table" >
+        <thead>
+            <tr>
+                <th>Category Id</th>
+                <th>Locale Id</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <ErrorBoundary>
+        <ChildContent>
+
+        <tbody>        
+            @if (mcnList.Any())
+            {
+                @foreach (var mcn in mcnList)
+                {
+                    <tr>
+                        <td>@mcn.CategoryId</td>
+                        <td>@mcn.LocaleId</td>
+                        <td>@mcn.Name</td>
+                     </tr>
+                }
+            }
+           
+        </tbody>
+    </ChildContent>
+    <ErrorContent>
+          <p>  There was error retrieving data </p>
+    </ErrorContent>
+    </ErrorBoundary>
+        
+    </table>
+
+       </div>
+    </div>
+    }
+    
+
+@code {
+
+    private IEnumerable<Mapped_Category_NamesDTO> mcnList { get; set; } = new List<Mapped_Category_NamesDTO>();
+    protected override async Task OnInitializedAsync()
+    {
+        mcnList = await mcnrepository.GetAllMapped_Category_Names();
+
+    }
+}
+

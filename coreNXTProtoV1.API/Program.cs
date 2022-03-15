@@ -12,7 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<AppDBContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DBConnection")));
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
-builder.Services.AddCors(o => o.AddPolicy("coreNXTProtoV1", builder => { builder.WithOrigins("https://localhost:7076").AllowAnyMethod().WithHeaders(HeaderNames.ContentType); }));
+builder.Services.AddCors(o => o.AddPolicy("coreNXTProtoV1", builder => { builder.WithOrigins("https://localhost:7076").AllowAnyMethod().WithHeaders(Microsoft.Net.Http.Headers.HeaderNames.ContentType); }));
 builder.Services.AddRouting(option => option.LowercaseUrls = true);
 builder.Services.AddControllers().AddJsonOptions(opt => opt.JsonSerializerOptions.PropertyNamingPolicy = null)
     .AddNewtonsoftJson(opt => {

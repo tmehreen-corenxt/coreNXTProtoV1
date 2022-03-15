@@ -1,0 +1,71 @@
+﻿@page "/locales"
+@using Microsoft.AspNetCore.Components.Web
+@using coreNXTProtoV1.Business.Repository.IRepository
+@using coreNXTProtoV1.Models
+@inject ILocalesRepository localesRepository    
+
+<h3>Locales</h3>
+
+@if (localesList ==null)    
+{
+    <p><em>Loading...</em></p>
+}
+
+else{
+    <div class= "row mt-4">
+       <div class="col-12">
+    <table class="table" >
+        <thead>
+            <tr>
+                <th>LocaleId</th>
+                <th>Name</th>
+                <th>Country Code</th>
+                <th>Language Code</th>
+                <th>Is Active</th>
+   
+            </tr>
+        </thead>
+        <ErrorBoundary>
+        <ChildContent>
+
+        <tbody>        
+            @if (localesList.Any())
+            {
+                @foreach (var locale in localesList)
+                {
+                    <tr>
+                        <td>@locale.LocaleId</td>
+                        <td>@locale.Name</td>
+                        <td>@locale.Countrycode</td>
+                        <td>@locale.LanguageCode</td>
+                        <td>@locale.IsActive</td>
+                     </tr>
+                }
+            }
+           
+        </tbody>
+    </ChildContent>
+    <ErrorContent>
+          <p>  There was error retrieving data </p>
+    </ErrorContent>
+    </ErrorBoundary>
+        
+    </table>
+
+       </div>
+    </div>
+    }
+    
+
+@code {
+
+
+
+    private IEnumerable<LocalesDTO> localesList { get; set; } = new List<LocalesDTO>();
+    protected override async Task OnInitializedAsync()
+    {
+        localesList = await localesRepository.GetAllLocales();
+
+    }
+}
+

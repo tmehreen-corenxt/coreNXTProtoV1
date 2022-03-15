@@ -19,8 +19,28 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Malik sahb .DESKTOP-V2N5VJQ/Downloads/coreNXTProtoV1/coreNXTProtoV1.Server/Pages/AttributeNames.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXR0cmlidXRlTmFtZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Malik sahb .DESKTOP-V2N5VJQ/Downloads/coreNXTProtoV1/coreNXTProtoV1.Server/Pages/Categories.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcmllcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Malik sahb .DESKTOP-V2N5VJQ/Downloads/coreNXTProtoV1/coreNXTProtoV1.Server/Pages/CategoryDisplayAttributes.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcnlEaXNwbGF5QXR0cmlidXRlcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Malik sahb .DESKTOP-V2N5VJQ/Downloads/coreNXTProtoV1/coreNXTProtoV1.Server/Pages/CategoryHeader.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcnlIZWFkZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Malik sahb .DESKTOP-V2N5VJQ/Downloads/coreNXTProtoV1/coreNXTProtoV1.Server/Pages/CategoryNames.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcnlOYW1lcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Malik sahb .DESKTOP-V2N5VJQ/Downloads/coreNXTProtoV1/coreNXTProtoV1.Server/Pages/CategorySearchAttributes.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcnlTZWFyY2hBdHRyaWJ1dGVzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Malik sahb .DESKTOP-V2N5VJQ/Downloads/coreNXTProtoV1/coreNXTProtoV1.Server/Pages/Counter.razor]
@@ -31,8 +51,44 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Malik sahb .DESKTOP-V2N5VJQ/Downloads/coreNXTProtoV1/coreNXTProtoV1.Server/Pages/HeaderNames.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSGVhZGVyTmFtZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Malik sahb .DESKTOP-V2N5VJQ/Downloads/coreNXTProtoV1/coreNXTProtoV1.Server/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Malik sahb .DESKTOP-V2N5VJQ/Downloads/coreNXTProtoV1/coreNXTProtoV1.Server/Pages/Locales.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9jYWxlcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Malik sahb .DESKTOP-V2N5VJQ/Downloads/coreNXTProtoV1/coreNXTProtoV1.Server/Pages/Manufacturer.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFudWZhY3R1cmVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Malik sahb .DESKTOP-V2N5VJQ/Downloads/coreNXTProtoV1/coreNXTProtoV1.Server/Pages/Mapped_Category.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFwcGVkX0NhdGVnb3J5LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Malik sahb .DESKTOP-V2N5VJQ/Downloads/coreNXTProtoV1/coreNXTProtoV1.Server/Pages/Mapped_Category_Names.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFwcGVkX0NhdGVnb3J5X05hbWVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Malik sahb .DESKTOP-V2N5VJQ/Downloads/coreNXTProtoV1/coreNXTProtoV1.Server/Pages/Mapped_Category_Taxonomy.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFwcGVkX0NhdGVnb3J5X1RheG9ub215LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Malik sahb .DESKTOP-V2N5VJQ/Downloads/coreNXTProtoV1/coreNXTProtoV1.Server/Pages/Product.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Malik sahb .DESKTOP-V2N5VJQ/Downloads/coreNXTProtoV1/coreNXTProtoV1.Server/Pages/ProductAccessories.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdEFjY2Vzc29yaWVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Malik sahb .DESKTOP-V2N5VJQ/Downloads/coreNXTProtoV1/coreNXTProtoV1.Server/Pages/ProductAttribute.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdEF0dHJpYnV0ZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Malik sahb .DESKTOP-V2N5VJQ/Downloads/coreNXTProtoV1/coreNXTProtoV1.Server/Shared/SurveyPrompt.razor]

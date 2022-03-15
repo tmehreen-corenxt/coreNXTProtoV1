@@ -18,10 +18,14 @@ else{
     <table class="table" >
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Description</th>
-            </tr>
+                <th>Category Id</th>
+                <th>Parent Category Id</th>
+                <th>Category Level</th>
+                <th>Display Order</th>
+                <th>Is Active</th>
+                <th>Order Number</th>
+                <th>Last Updated</th>
+             </tr>
         </thead>
         <ErrorBoundary>
         <ChildContent>
@@ -32,10 +36,15 @@ else{
                 @foreach (var category in categoryList)
                 {
                     <tr>
-                        <td>@category.Id</td>
-                        <td>@category.Name</td>
-                        <td>@category.Description</td>
-                     </tr>
+                        <td>@category.CategoryId</td>
+                        <td>@category.ParentCategoryId</td>
+                        <td>@category.CatLevel</td>
+                        <td>@category.DisplayOrder</td>
+                        <td>@category.IsActive</td>
+                        <td>@category.OrderNumber</td>    
+                        <td>@category.LastUpdated</td>
+                    
+                    </tr>
                 }
             }
            

@@ -26,16 +26,28 @@ namespace coreNXTProtoV1.Business.Repository
         {
             try
             {
-                var tax =
+                var categories =
                     _mapper.Map<IEnumerable<Category>, IEnumerable<CategoryDTO>>
                     (_db.Category);
                 //var tax = await _db.Mapped_Category_Taxonomy.ToListAsync();
-                return await Task.FromResult(tax);
+                return await Task.FromResult(categories);
             }
             catch
             {
                 throw new NotImplementedException();
             }
         }
+        //public async Task<T> GetAllFromTable<T>(T tablename)
+        //{
+        //    var Tsource = tablename;
+        //    var Tdestination = tablename + "DTO";
+        //    var dbobj = "_db." + Tsource;
+        //    var result =
+        //        _mapper.Map<Tsource>, < Tdestination >
+        //        (dbobj);
+
+
+        //    return await Task.FromResult(result);
+        //}
     }
 }

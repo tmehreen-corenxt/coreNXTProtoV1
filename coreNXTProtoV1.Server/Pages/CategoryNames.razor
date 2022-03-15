@@ -1,0 +1,66 @@
+﻿@page "/categorynames"
+@using Microsoft.AspNetCore.Components.Web
+@using coreNXTProtoV1.Business.Repository.IRepository
+@using coreNXTProtoV1.Models
+@inject ICategoryNamesRepository catNamesrepository    
+
+<h3>Category Names</h3>
+
+@if (categoryNamesList ==null)    
+{
+    <p><em>Loading...</em></p>
+}
+
+else{
+    <div class= "row mt-4">
+       <div class="col-12">
+    <table class="table" >
+        <thead>
+            <tr>
+                <th>Category Id</th>
+                <th>Name</th>
+                <th>Locale Id</th>
+            </tr>
+        </thead>
+        <ErrorBoundary>
+        <ChildContent>
+
+        <tbody>        
+            @if (categoryNamesList.Any())
+            {
+                @foreach (var categoryName in categoryNamesList)
+                {
+                    <tr>
+                        <td>@categoryName.CategoryId</td>
+                        <td>@categoryName.Name</td>
+                        <td>@categoryName.LocaleId</td>
+                     </tr>
+                }
+            }
+           
+        </tbody>
+    </ChildContent>
+    <ErrorContent>
+          <p>  There was error retrieving data </p>
+    </ErrorContent>
+    </ErrorBoundary>
+        
+    </table>
+
+       </div>
+    </div>
+    }
+    
+
+@code {
+
+
+
+    private IEnumerable<CategoryNamesDTO> categoryNamesList { get; set; } = new List<CategoryNamesDTO>();
+    protected override async Task OnInitializedAsync()
+    {
+        categoryNamesList = await catNamesrepository.GetAllCategoryNames();
+
+    }
+}
+

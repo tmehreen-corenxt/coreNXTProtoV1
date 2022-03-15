@@ -1,0 +1,71 @@
+﻿@page "/categorysearchattributes"
+@using Microsoft.AspNetCore.Components.Web
+@using coreNXTProtoV1.Business.Repository.IRepository
+@using coreNXTProtoV1.Models
+@inject ICategorySearchAttributesRepository catsearchrepository    
+
+<h3>Category Search Attributes</h3>
+
+@if (categorySAList ==null)    
+{
+    <p><em>Loading...</em></p>
+}
+
+else{
+    <div class= "row mt-4">
+       <div class="col-12">
+    <table class="table" >
+        <thead>
+            <tr>
+                <th>Attribute Id</th>
+                <th>Category Id</th>
+                <th>Is Active</th>
+                <th>Is Preferred</th>
+                <th>Last Updated</th>
+   
+            </tr>
+        </thead>
+        <ErrorBoundary>
+        <ChildContent>
+
+        <tbody>        
+            @if (categorySAList.Any())
+            {
+                @foreach (var categorySA in categorySAList)
+                {
+                    <tr>
+                        <td>@categorySA.AttributeId</td>
+                        <td>@categorySA.CategoryId</td>
+                        <td>@categorySA.IsActive</td>
+                        <td>@categorySA.IsPreferred</td>
+                        <td>@categorySA.LastUpdated</td>
+          
+                     </tr>
+                }
+            }
+           
+        </tbody>
+    </ChildContent>
+    <ErrorContent>
+          <p>  There was error retrieving data </p>
+    </ErrorContent>
+    </ErrorBoundary>
+        
+    </table>
+
+       </div>
+    </div>
+    }
+    
+
+@code {
+
+
+    private IEnumerable<CategorySearchAttributesDTO> categorySAList { get; set; } = new List<CategorySearchAttributesDTO>();
+    protected override async Task OnInitializedAsync()
+    {
+        categorySAList = await catsearchrepository.GetAllCategorySearchAttributes();
+
+    }
+}
+

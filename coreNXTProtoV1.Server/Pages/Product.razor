@@ -1,0 +1,81 @@
+﻿@page "/product"
+@using Microsoft.AspNetCore.Components.Web
+@using coreNXTProtoV1.Business.Repository.IRepository
+@using coreNXTProtoV1.Models
+@inject IProductRepository prodrepository    
+
+<h3>productList</h3>
+
+@if (productList ==null)    
+{
+    <p><em>Loading...</em></p>
+}
+
+else{
+    <div class= "row mt-4">
+       <div class="col-12">
+    <table class="table" >
+        <thead>
+            <tr>
+             <th>Category Id</th>
+             <th>Creation Date</th>
+             <th>Equivalency</th>
+             <th>Is Accessory</th>
+             <th>Is Active</th>
+             <th>Manufacturer Id</th>
+             <th>Mfg Part No</th>
+             <th>Modified Date</th>
+             <th>Product Id</th>
+             <th>Last Updated</th>
+            </tr>
+        </thead>
+        <ErrorBoundary>
+        <ChildContent>
+
+        <tbody>        
+            @if (productList.Any())
+            {
+                @foreach (var product in productList)
+                {
+                    <tr>
+                        <td>@product.CategoryId</td>
+                        <td>@product.CreationDate</td>
+                        <td>@product.Equivalency</td>
+                        <td>@product.IsAccessory</td>
+                        <td>@product.IsActive</td>
+                        <td>@product.ManufacturerId</td>
+                        <td>@product.MfgPartNo</td>
+                        <td>@product.ModifiedDate</td>
+                        <td>@product.ProductId</td>
+                        <td>@product.LastUpdated</td>
+
+           
+                     </tr>
+                }
+            }
+           
+        </tbody>
+    </ChildContent>
+    <ErrorContent>
+          <p>  There was error retrieving data </p>
+    </ErrorContent>
+    </ErrorBoundary>
+        
+    </table>
+
+       </div>
+    </div>
+    }
+    
+
+@code {
+
+
+    private IEnumerable<ProductDTO> productList { get; set; } = new List<ProductDTO>();
+    protected override async Task OnInitializedAsync()
+    {
+        productList = await prodrepository.GetAllProducts();
+
+    }
+}
+
